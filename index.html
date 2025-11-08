@@ -1,57 +1,99 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="style.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="Images/VelocityTech.png" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Patrick+Hand&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <title>VelocityTech - Application Queue</title>
 </head>
+
 <body>
-    <div class="MainText_Container">
-  <h1 class="MainText">
-    Welcome !
-  </h1>
-</div>
-<div class="container-text">
-<h2 class="container-inside-text">
-  <span>Who we are?</span>
-  <span>Try yourself!</span>
-  <span>What we do ?</span>
-</h2>
-</div>
-<div class="Containers">
-<div class="box1">
-<p class="box-1-text">
-Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium est alias labore perspiciatis incidunt repudiandae, explicabo rerum. Praesentium, dolores sint saepe impedit rem voluptate ducimus modi, magni veniam quas voluptatem.
-Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam aperiam blanditiis odit. Ab, labore ipsum qui adipisci sit pariatur, maiores earum culpa voluptatem obcaecati exercitationem, minima vitae iste? Temporibus, adipisci!
-</p>
-</div>
-<div class="box1">
-  <p class="box-1-text">
-  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium est alias labore perspiciatis incidunt repudiandae, explicabo rerum. Praesentium, dolores sint saepe impedit rem voluptate ducimus modi, magni veniam quas voluptatem.
-  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam aperiam blanditiis odit. Ab, labore ipsum qui adipisci sit pariatur, maiores earum culpa voluptatem obcaecati exercitationem, minima vitae iste? Temporibus, adipisci!
-  </p>
-  </div>
-  <div class="box1">
-    <p class="box-1-text">
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium est alias labore perspiciatis incidunt repudiandae, explicabo rerum. Praesentium, dolores sint saepe impedit rem voluptate ducimus modi, magni veniam quas voluptatem.
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam aperiam blanditiis odit. Ab, labore ipsum qui adipisci sit pariatur, maiores earum culpa voluptatem obcaecati exercitationem, minima vitae iste? Temporibus, adipisci!
-    </p>
+  <header>
+    <div class="container header-row">
+      <div class="brand-box">
+        <h1 class="brand">VelocityTech</h1>
+      </div>
     </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-row">
+        <div class="header-text">
+          <h2>Launch Offer — Limited Spots</h2>
+          <p class="lead">
+            Join the <strong>VelocityTech</strong> waitlist — an all-in-one platform to boost campaigns, generate leads and sales efficiently.
+          </p>
+          <p class="lead">
+            Smart Paid Ad Management (Meta & Google Ads) — campaigns optimized to get the most results at the lowest cost.
+          </p>
+          <p class="lead">
+             Social Media Strategy — professional content creation, design, and engagement growth.
+          </p>
+
+          </div>
+      </div>
+    </section>
+    <div class="main-header">
+    <h3 class="main-text">Why choose VelocityTech?</h3>
   </div>
-  <div class="btn-container">
-  <button class="scroll-btn" id="scrollToLogin">Register</button>
+    
+    <section id="beneficios" class="features container">
+      </article>
+      <div class="feature-cards">
+        <div>
+          <h4>Easy to Use</h4>
+          <p>Intuitive design and fast delivery.</p>
+        </div>
+        <div>
+          <h4>VIP Support</h4>
+          <p>Team ready to assist whenever you need.</p>
+        </div>
+        <div>
+          <h4>Launch Price</h4>
+          <p>Special offer for those joining the queue now.</p>
+        </div>
+        </div>
+    </section>
+    <div class="hiw-box">
+      <div class="btn-box">
+        <button class="btn-link" onclick="scrollToCandidatar()">
+          Apply Now
+        </button>
+      </div>
+  </div>
+<div class="forms-containers">
+    <section id="candidatar" class="container form-section" aria-labelledby="form-title">
+
+      <h3 id="form-title">Start Now !</h3>
+
+      <form id="formFila" action="" method="post" novalidate>
+        <label for="nome">Full Name:</label>
+        <input id="nome" name="nome" type="text" placeholder="Enter your full name" required>
+
+        <label for="email">Email:</label>
+        <input id="email" name="email" type="email" placeholder="Enter your email" required>
+
+        <label for="telefone">Phone (optional):</label>
+        <input id="telefone" name="telefone" type="tel" placeholder="(99) 99999-9999">
+
+        <label for="mensagem">Why do you want to join?</label>
+        <input id="mensagem" name="mensagem" type="text" placeholder="Briefly explain your interest">
+        
+        <button type="submit">Join the Queue</button>
+      </form>
+      <div id="resultado" style="margin-top: 20px;"></div>
+    </section>
+  </main>
 </div>
-<div class="login-container">
-<div id="login-section" class="login-box">
-  <h2 class="login-title">Fast and simple !</h2>
-  <input type="text" placeholder="Username">
-  <input type="password" placeholder="Password">
-  <button class="login-btn">Start</button>
-</div>
-</div>
-<script src="script.js"></script>
+  <footer class="site-footer container">
+  <script src="script.js"></script>
 </body>
+
 </html>

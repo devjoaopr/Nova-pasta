@@ -1,182 +1,274 @@
-*{
-    font-family: "Inter";
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-  
-    /* mesmo fundo que você usou na .Main */
-    background-image:
-      radial-gradient(circle at 50% -10%, #916e22 0%, transparent 50%),
-      radial-gradient(circle at 50% -50%, #b5ada6 0%, transparent 50%),
-      radial-gradient(circle at 50% -50%, #f50303 25%, transparent 70%),
-      radial-gradient(circle at 80% 60%, black 0%),
-      radial-gradient(circle at center, black 70%, transparent 100%);
-    
-    background-color: black;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed; /* <- ESSENCIAL pra manter coerência ao scrollar */
-    color: white;
-  }
+html, body {
+  height: 100%;
+  font-family: "Inter";
+  line-height: 1.5;
+  color: white;
+  background-color: black;
+  background-image:
+    radial-gradient(circle at 50% -10%, #916e22 0%, transparent 50%),
+    radial-gradient(circle at 50% -50%, #b5ada6 0%, transparent 50%),
+    radial-gradient(circle at 50% -50%, #f50303 25%, transparent 70%),
+    radial-gradient(circle at 80% 60%, black 0%),
+    radial-gradient(circle at center, black 70%, transparent 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
 
-.MainText{
-    opacity: 80%;
-    font-size: 60px;
-    font-weight: 800;
-    color: transparent;
-    background: linear-gradient(160deg, #f7c2c2,#f7d4d4,
-    #f7c9c9, #fed8d8);
-    background-clip: text;
-    -webkit-background-clip: text;
-    background-size: 200% 200%;
-    animation: gradienteAnim 15s linear infinite;
+
+.brand-box{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.MainText_Container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+.MainText {
+  font-size: 60px;
+  font-weight: 800;
+  color: transparent;
+  background: linear-gradient(160deg, #ffffff, #000000, #f7c9c9, #ffffff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-size: 200% 200%;
+  animation: gradienteAnim 15s ease-in-out infinite;
 }
 @keyframes gradienteAnim {
-    0% {
-    background-position: 0% 50%;
-    }
-    50% {
-    background-position: 100% 50%;
-    }
-    100% {
-    background-position: 0% 50%;
-    }
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-.MainText_Container{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-}
-
-.container-text{
-    width: 100%;
-    display: flex;
-    color: white;
-    padding: 10px;
-    font-size: 30px;
-    justify-content: center;
-}
-
-.container-inside-text {
-    display: flex;
-    gap: 300px;
-    justify-content: center;
-  }
-
-.Containers{
-    display: flex;
-    gap: 150px;
-}
-.box1{
-    font-weight: 200;
-    color: white;
-    text-wrap: wrap;
-    margin-left: 10px;
-    padding: 10px;
-    border: solid 1px white;
-    width: 400px;
-    display: flex;
-    height: fit-content;
-    border-radius: 40px;
-    background-color: rgba(0, 0, 0, 0.2); 
-}
-
-
-.box-1-text{
-    min-width: 0;                 
-    white-space: normal;
-    overflow-wrap: break-word;
-}
-
-.btn-container{
-    margin-top: 30px;
-    width: 100%;
-    justify-content: center;
-    display: flex;
-}
-
-.scroll-btn{
-    font-weight: 200 ;
-    background:transparent;
-    color: white;
-    border: none;
-    padding: 12px 30px;
-    font-size: 20px;
-    border-radius: 40px;
-    cursor: pointer;
-    transition: 0.3s ease;
-    box-shadow: 0 0 10px rgba(255, 34, 0, 0.5);
-    margin: 20px;
-}
-.scroll-btn:hover {
-    background-color: rgba(255, 34, 0, 0.269) ;
-    transform: scale(1.05);
-  }
-
-
-.login-container{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-}
-
-/* SEÇÃO DE LOGIN */
-.login-box {
-  width: 100%;
-  height: 600px;
+.Containers {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  gap: 15px;
-  color: white;
+  gap: 150px;
+  margin-top: 40px;
+  flex-wrap: wrap;
 }
-
-.login-box input {
-  box-shadow: 0 0 05px rgba(255, 34, 0, 0.5);
+.box1 {
   width: 400px;
   padding: 10px;
-  height: 40px;
-  border: 0;
-  border-radius: 30px;
-  background: rgba(0,0,0,0.3);
+  border: 1px solid white;
+  border-radius: 40px;
+  background-color: rgba(0,0,0,0.2);
+}
+.box-1-text {
   color: white;
-  outline: none;
-  
-}
-.login-box input::placeholder {
-  text-align: center;
-  color: #feceb9;
+  font-weight: 200;
+  overflow-wrap: break-word;
 }
 
-.login-btn {
-    font-weight: 200 ;
-    background:transparent;
-    color: white;
-    border: none;
-    padding: 12px 30px;
-    font-size: 20px;
-    border-radius: 40px;
-    cursor: pointer;
-    transition: 0.3s ease;
-    box-shadow: 0 0 10px rgba(255, 34, 0, 0.5);
-    margin: 20px;
+.btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
 }
-
-.login-btn:hover {
-    background-color: rgba(255, 34, 0, 0.269) ;
+.scroll-btn {
+  padding: 12px 30px;
+  font-size: 20px;
+  border-radius: 40px;
+  border: none;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  font-weight: 200;
+  box-shadow: 0 0 10px rgba(255,34,0,0.5);
+  transition: 0.3s;
+}
+.scroll-btn:hover {
+  background-color: rgba(255,34,0,0.27);
   transform: scale(1.05);
 }
 
-/* Rolagem suave no site */
+.task-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+.table-class {
+  width: 100%;
+  max-width: 500px;
+  border-collapse: collapse;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(255,34,0,0.5);
+  background-color: rgba(0,0,0,0.3);
+  font-size: 16px;
+  color: white;
+}
+.table-class th, .table-class td {
+  padding: 12px 16px;
+  text-align: left;
+}
+.table-class thead {
+  background-color: rgba(255,34,0,0.8);
+  color: white;
+}
+.table-class tbody tr:hover {
+  background-color: rgba(255,34,0,0.2);
+}
+.table-class input[type="checkbox"] {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+.completed {
+  text-decoration: line-through;
+  color: rgba(255,255,255,0.5);
+}
+
+.FormsSection {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px;
+  border-radius: 40px;
+  background-color: rgba(0,0,0,0.3);
+  box-shadow: 0 0 10px rgba(255,34,0,0.5);
+  max-width: 500px;
+  width: 100%;
+}
+form input {
+  padding: 10px;
+  border-radius: 30px;
+  border: 0;
+  background-color: rgba(0,0,0,0.2);
+  color: white;
+  outline: none;
+}
+form input::placeholder {
+  color: #feceb9;
+  text-align: center;
+}
+form button {
+  padding: 12px 30px;
+  border-radius: 40px;
+  border: none;
+  font-size: 20px;
+  font-weight: 200;
+  color: white;
+  background: transparent;
+  box-shadow: 0 0 10px rgba(255,34,0,0.5);
+  cursor: pointer;
+  transition: 0.3s;
+}
+form button:hover {
+  background-color: rgba(255,34,0,0.27);
+  transform: scale(1.05);
+}
+
+@media(max-width:880px){
+  .Containers { gap: 20px; flex-direction: column; }
+  .table-class { max-width: 90%; }
+  form { max-width: 90%; }
+}
+.forms-containers{
+  margin-top: 200px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
 html {
   scroll-behavior: smooth;
 }
 
-.login-title{
-    font-size: 50px;
+#formFila{
+  width: 700px;
+}
+
+.hero{
+  display: flex;
+  justify-content: center;
+} 
+
+.aply-btn{
+  background: transparent;
+
+}
+
+.cadastroa, .esqueceua {
+  color: #ff5733; /* vermelho vibrante para destaque */
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.cadastroa:hover, .esqueceua:hover {
+  color: #ffa07a; /* tom mais claro ao passar o mouse */
+  text-shadow: 0 0 5px #ff5733;
+}
+
+.btn-box{
+  background: transparent;
+  color: white;
+  width: 100%;
+  border: 0;
+  justify-content: center;
+  display: flex;
+}
+
+.btn-link {
+  background: transparent;
+  border: 0;
+  border-radius: 30px;
+  width: 200px;
+  height: 40px;
+  box-shadow: 0 0 10px #bf2828c2;
+  padding: 10px;
+  color: white;
+  cursor: auto;
+}
+.btn-link:hover{
+  color: #bf2828c2;
+}
+#form-title{
+  margin-bottom:20px ;
+}
+
+.feature-cards{
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+.hiw-box{
+  margin-top: 40px;
+  display: flex;
+
+}
+
+.hiw-explanation{
+  width: 100%;
+  display: flex;
+  gap: 60px;
+}
+
+.main-header{
+  margin-top: 50px;
+  margin-bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
